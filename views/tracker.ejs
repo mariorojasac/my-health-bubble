@@ -18,9 +18,8 @@
         <div>
             <nav>
                 <ul>
-                    <li>
-                        <button><a href="/trackedlogs/new">Add Log</a></button>
-                    </li>
+                    <li><button><a href="/trackedlogs/new">Add Log</a></button></li>
+                    <li><button><a href="/dashboard">Back to dashboard</a></button></li>
                 </ul>
             </nav>
         </div>
@@ -28,30 +27,30 @@
 
 
     <main>
-<% logs.forEach(log => { %>
-    <div>
+        <% logs.forEach(log => { %>
         <div>
-            <h2><a href="/trackedlogs/<%= log._id %>"><%= log.activity %></a></h2>
+            <div>
+                <h2><a href="/trackedlogs/<%= log._id %>"><%= log.activity %></a></h2>
+            </div>
+            <div>
+                <p><%= log.createdAt %></p>
+                <p>Meals: <%= log.meals %></p>
+                <p>Weight: <%= log.weight %></p>
+                <p>symptoms: <%= log.symptoms %></p>
+            </div>
         </div>
         <div>
-            <p><%= log.createdAt %></p>
-            <p>Meals: <%= log.meals %></p>
-            <p>Weight: <%= log.weight %></p>
-            <p>symptoms: <%= log.symptoms %></p>
+            <div>
+                <button><a href="/trackedlogs/<%= log._id%>/edit">Edit</a></button>
+            </div>
+            <div>
+                <form method="POST" action="/trackedlogs/<%= log._id %>?_method=DELETE">
+                    <button type="submit" value="DELETE">Delete</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <div>
-        <div>
-            <button><a href="/trackedlogs/<%= log._id%>/edit">Edit</a></button>
-        </div>
-        <div>
-            <form method="POST" action="/trackedlogs/<%= log._id %>?_method=DELETE">
-                <button type="submit" value="DELETE">Delete</button>
-            </form>
-        </div>
-    </div>
         <hr>
-          <% }); %>
+        <% }); %>
     </main>
 
 </body>

@@ -2,11 +2,6 @@ const express = require("express");
 const router = express.Router();
 const Log = require("../models/log");
 
-// induces
-
-// router.get("/", (req, res) => {
-//   res.render("tracker.ejs", { user: req.session.user });
-// });
 
 router.get("/", (req, res) => {
   Log.find({}, (err, logs) => {

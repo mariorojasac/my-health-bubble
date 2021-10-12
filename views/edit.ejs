@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <div class="row">
-            <h1>Edit</h1>
+            <h1>Edit <%= log.activity %></h1>
         </div>
         <div class="row">
             <form action="/trackedlogs/<%= log.id%>?_method=PUT" method="POST">
-                
-                <input class="button button-primary"type="submit" value="Edit Log">
+                Activity: <input type="text" name="activity" value="<%= log.activity %> " required>
+                Meal: <input type="text" name="meals" value="<%= log.meals %> ">
+                Weight: <input type="Number" name="weight" value="<%= log.weight %> ">
+                Symptoms: <input type="text" name="symptoms" value="<%= log.symptoms %> ">
+                <input class="button button-primary" type="submit" value="Edit Log">
         </div>
         </form>
     </div>
 </body>
+
 </html>

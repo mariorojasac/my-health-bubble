@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      img {
+        border-radius: 50%;
+        width: 150px;
+      }
+    </style>
     <title>Hello <%= user.username %></title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Hello <%= user.username %></h1>
-        <nav>
-            <a href="/logout">Logout</a>            
-        </nav>
+      <div><img src="<%= user.profilePic %>" alt="" /></div>
+      <div><h1>Hello <%= user.username %></h1></div>
+      <nav>
+        <a href="/logout">Logout</a>
+      </nav>
     </header>
     <main>
-        <div>
-            <button><a href="/trackedlogs">Tracker</a></button>
-        </div>
+      <div>
+        <button><a href="/trackedlogs">Tracker</a></button>
+      </div>
     </main>
-</body>
+  </body>
 </html>

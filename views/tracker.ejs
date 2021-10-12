@@ -28,24 +28,30 @@
 
 
     <main>
+<% logs.forEach(log => { %>
+    <div>
         <div>
-            <div>
-                <button><a href="./edit.ejs">Edit</a></button>
-            </div>
-            <div>
-                <button><a href="./">Delete</a></button>
-            </div>
+            <h2><a href="/trackedlogs/<%= log._id %>"><%= log.activity %></a></h2>
         </div>
         <div>
-            <div>
-                <h2>Log #1 ; time stamp</h2>
-            </div>
-            <div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque sunt aut praesentium. Expedita natus
-                    magnam quisquam nesciunt cumque et illo asperiores mollitia minima recusandae exercitationem, quia
-                    voluptas consectetur sapiente sequi.</p>
-            </div>
+            <p><%= log.createdAt %></p>
+            <p>Meals: <%= log.meals %></p>
+            <p>Weight: <%= log.weight %></p>
+            <p>symptoms: <%= log.symptoms %></p>
         </div>
+    </div>
+    <div>
+        <div>
+            <button><a href="/trackedlogs/<%= log._id%>/edit">Edit</a></button>
+        </div>
+        <div>
+            <form method="POST" action="/trackedlogs/<%= log._id %>?_method=DELETE">
+                <button type="submit" value="DELETE">Delete</button>
+            </form>
+        </div>
+    </div>
+        <hr>
+          <% }); %>
     </main>
 
 </body>

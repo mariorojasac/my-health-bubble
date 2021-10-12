@@ -4,15 +4,15 @@ const Log = require("../models/log");
 
 // induces
 
-router.get("/", (req, res) => {
-  res.render("tracker.ejs", { user: req.session.user });
-});
-
-// router.get("/trackedlogs", (req, res) => {
-//   Log.find({}, (err, logs) => {
-//     res.render("tracker.ejs", { logs });
-//   });
+// router.get("/", (req, res) => {
+//   res.render("tracker.ejs", { user: req.session.user });
 // });
+
+router.get("/", (req, res) => {
+  Log.find({}, (err, logs) => {
+    res.render("tracker.ejs", { logs, user: req.session.user });
+  });
+});
 
 router.get("/new", (req, res) => {
   res.render("new.ejs");

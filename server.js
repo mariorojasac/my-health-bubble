@@ -1,7 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
+const methodOverride = require("method-override");
 const indexController = require('./controllers/index');
+const logsController = require('./controllers/logs')
 const usersController = require('./controllers/users');
 const expressSession = require('express-session');
 
@@ -22,8 +24,10 @@ db.on("error", (error) => {
   console.log(`Error connecting to MongoDb: ${error.message}`);
 });
 
+app.use(express.static("public"));
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride("_method"));
 app.use(expressSession({
     secret: 'cknlkclnclnen',
     resave: false,
@@ -32,6 +36,7 @@ app.use(expressSession({
 
 // Mount Routes
 app.use('/', indexController);
+app.use('/trackedlogs', logsController);
 app.use('/', usersController);
 
 

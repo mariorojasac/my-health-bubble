@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <div class="container">
+        <div class="row">
+            <h1><%=  %> Details</h1>
+
+        </div>
+        <div class="row">
+            <nav>
+                <a class="button" href="/products">See All Products</a>
+                <a class="button" href="/products/new">Create A New Product</a>
+            </nav>
+        </div>
+
+        <div class="row">
+            <p class="section-description"><%= %>
+            </p>
+
+        </div>
+
+        <div class="row">
+            <p class="section-description">
+                <img class="u-max-full-width" src="<%=  %> " alt="items">
+            </p>
+
+        </div>
+
+       
+        <div class="row">
+            <button>BUY $<%=  %></button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

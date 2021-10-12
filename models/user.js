@@ -1,6 +1,4 @@
-const {
-    ObjectId
-} = require("bson");
+
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
@@ -13,8 +11,8 @@ const userSchema = new Schema({
     phoneNumber: Number,
     birthday: String,
     profilePic: String,
-    health: ObjectId,
-    appointments: ObjectId,
+    // health: ObjectId,
+    // appointments: ObjectId,
 
 }, {
     timestamps: true

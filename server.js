@@ -5,6 +5,7 @@ const methodOverride = require("method-override");
 const indexController = require('./controllers/index');
 const logsController = require('./controllers/logs')
 const usersController = require('./controllers/users');
+const profileController = require('./controllers/profile')
 const expressSession = require('express-session');
 
 const app = express();
@@ -38,6 +39,7 @@ app.use(expressSession({
 app.use('/', indexController);
 app.use('/trackedlogs', logsController);
 app.use('/', usersController);
+app.use('/profile', profileController)
 
 
 app.listen(PORT, () => {

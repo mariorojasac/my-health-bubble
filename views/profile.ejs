@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <style>
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+    h2 {
+        text-transform: uppercase;
+    }
+
+     img {
+      display: inline-block;
+      position: relative;
+      width: 8vw;
+      height: 10.5vh;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 5px solid gold;
+    }
+
+    .jumbotron {
+
+      margin: 0;
+      padding: 30px;
+      background-image: linear-gradient(to right, #5637dd, blue);
+      color: gold;
+    }
+
+    button {
+      margin-bottom: 5px;
+      width: 15vw;
+      color: white;
+    }
+
+    a {
+      
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row row-content">
+                <div class="col">
+<div><img src="<%= user.profilePic %>" alt="" /></div>
+      <div><h1>Hello <%= user.username %></h1></div>
+                </div>
+                <div class="col col-8 col-sm-6">
+                    <h1>MY PROFILE</h1>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div>
+            <nav>
+                <ul>
+                    <li><button><a href="/dashboard">Back to dashboard</a></button></li>
+                     <li><button><a href="/dashboard">My Appointments</a></button></li>
+                      <li><button><a href="/dashboard">My Doctors</a></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div>
+                <p>USER NAME: <%= user.username %></p>
+                <p>NAME: <%= user.name %></p>
+                <p>E MAIL: <%= user.email%></p>
+                <p>PHONE NUMBER: <%= user.phoneNumber %></p>
+                 <p>BIRTHDAY: <%= user.birthday %></p>
+                  <p>PROFILE PIC: <%= user.profilePic %></p>
+                  <p>JOINED: <%= user.createdAt %></p>
+                   <p>LAST UPDATED: <%= user.updatedAt %></p>
+            </div>
+    
+</body>
+</html>

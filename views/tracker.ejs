@@ -107,8 +107,16 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col">
-<% logs.forEach(function (log) {let x = log.weight ;console.log(x);}); %> 
-                    <p>Current Weight: </p>
+
+<% logs.forEach((log) => { if(logs[logs.length-1] === log){ %>
+    
+  
+    <p>Current Weight: <%= log.weight %>  </p>
+  
+  <% }}) %>
+
+
+
                 </div>
                 <div class="col"></div>
 

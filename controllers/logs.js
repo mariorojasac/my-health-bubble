@@ -1,19 +1,20 @@
 const express = require("express");
 const router = express.Router();
 const Log = require("../models/log");
+const isAuthenticated = require('../utilities/auth')
 
 
-router.get("/", (req, res) => {
+router.get("/", isAuthenticated, (req, res) => {
   Log.find({}, (err, logs) => {
     res.render("tracker.ejs", { logs, user: req.session.user });
   });
 });
 
-router.get("/new", (req, res) => {
+router.get("/new", isAuthenticated, (req, res) => {
   res.render("new.ejs");
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", isAuthenticated,  (req, res) => {
   Log.findByIdAndDelete(req.params.id, (err, deletedLogs) => {
     res.redirect("/trackedlogs");
   });
@@ -42,7 +43,7 @@ router.post("/", (req, res) => {
   });
 });
 
-router.get("/:id/edit", (req, res) => {
+router.get("/:id/edit", isAuthenticated, (req, res) => {
   Log.findById(req.params.id, (err, log) => {
     res.render("edit.ejs", { log });
   });

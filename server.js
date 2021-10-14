@@ -41,7 +41,6 @@ app.use('/trackedlogs', logsController);
 app.use('/', usersController);
 app.use('/profile', profileController)
 
-
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
 });

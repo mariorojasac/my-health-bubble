@@ -25,7 +25,9 @@
         <div class="row">
             <form action="/trackedlogs/<%= log.id%>?_method=PUT" method="POST">
                 Activity: <input type="text" name="activity" value="<%= log.activity %> " required>
+                 Description: <input type="text" name="description" value="<%= log.description %> " required> <br>
                 Meal: <input type="text" name="meals" value="<%= log.meals %> ">
+
                 Weight: <input type="Number" name="weight" value="<%= log.weight %> ">
                 Symptoms: <input type="text" name="symptoms" value="<%= log.symptoms %> ">
                 <input class="button button-primary" type="submit" value="Edit Log">

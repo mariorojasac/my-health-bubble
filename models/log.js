@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 
 const logSchema = new Schema({
     activity: String,
+    description: String,
     meals: String,
     weight: Number,
     symptoms: String,

@@ -14,44 +14,45 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <style>
-    .img-fluid {
-      max-width: 100%;
-      height: auto;
-    }
-    h2 {
-        text-transform: uppercase;
-    }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
 
-     img {
-      display: inline-block;
-      position: relative;
-      width: 8vw;
-      height: 10.5vh;
-      overflow: hidden;
-      border-radius: 50%;
-      border: 5px solid gold;
-    }
+        h2 {
+            text-transform: uppercase;
+        }
 
-    .jumbotron {
+        img {
+            display: inline-block;
+            position: relative;
+            width: 8vw;
+            height: 10.5vh;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 5px solid gold;
+        }
 
-      margin: 0;
-      padding: 30px;
-      background-image: linear-gradient(to right, #5637dd, blue);
-      color: gold;
-    }
+        .jumbotron {
 
-    button {
-      margin-bottom: 5px;
-      width: 15vw;
-      color: white;
-    }
+            margin: 0;
+            padding: 30px;
+            background-image: linear-gradient(to right, #5637dd, blue);
+            color: gold;
+        }
 
-    a {
-      
-      text-decoration: none;
-      color: white;
-    }
-  </style>
+        button {
+            margin-bottom: 5px;
+            width: 15vw;
+            color: black;
+        }
+
+        a {
+
+            text-decoration: none;
+            color: black;
+        }
+    </style>
     <title>Document</title>
 </head>
 
@@ -62,8 +63,10 @@
         <div class="container">
             <div class="row row-content">
                 <div class="col">
-<div><img src="<%= user.profilePic %>" alt="" /></div>
-      <div><h1>Hello <%= user.username %></h1></div>
+                    <div><img src="<%= user.profilePic %>" alt="" /></div>
+                    <div>
+                        <h1>Hello <%= user.username %></h1>
+                    </div>
                 </div>
                 <div class="col col-8 col-sm-6">
                     <h1>MY PROFILE</h1>
@@ -75,27 +78,32 @@
         </div>
         </div>
 
-        <div>
-            <nav>
-                <ul>
-                    <li><button><a href="/dashboard">Back to dashboard</a></button></li>
-                     <li><button><a href="/dashboard">My Appointments</a></button></li>
-                      <li><button><a href="/dashboard">My Doctors</a></button></li>
-                </ul>
-            </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col"><button><a href="/dashboard">dashboard</a></button></div>
+                <div class="col"><button><a href="/dashboard">Appointments</a></button></div>
+                <div class="col"><button><a href="/dashboard">Doctors</a></button></div>
+            </div>
         </div>
     </header>
 
-<div>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
                 <p>USER NAME: <%= user.username %></p>
                 <p>NAME: <%= user.name %></p>
                 <p>E MAIL: <%= user.email%></p>
                 <p>PHONE NUMBER: <%= user.phoneNumber %></p>
-                 <p>BIRTHDAY: <%= user.birthday %></p>
-                  <p>PROFILE PIC: <%= user.profilePic %></p>
-                  <p>JOINED: <%= user.createdAt %></p>
-                   <p>LAST UPDATED: <%= user.updatedAt %></p>
+                <p>BIRTHDAY: <%= user.birthday %></p>
+                <p>PROFILE PIC: <%= user.profilePic %></p>
+                <p>JOINED: <%= user.createdAt %></p>
+                <p>LAST UPDATED: <%= user.updatedAt %></p>
             </div>
-    
+            <div class="col"></div>
+        </div>
+    </div>
+
 </body>
+
 </html>

@@ -15,8 +15,9 @@
 - Authentication with Bcyrpt
 
 # Screenshot(s)
-
-![Homepage](/images/)
+![Homepage](images/IMG_0329.PNG)
+![Homepage](images/IMG_0327.PNG)
+![Homepage](images/IMG_0328.PNG)
 
 # Getting Started 
 

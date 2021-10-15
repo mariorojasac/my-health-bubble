@@ -1,5 +1,7 @@
 # My Health Bubble
-
+My health bubble is an all in one health app.
+Keep track of your meals , weight, and activities.
+Helping you keep track of your progress. 
 
 ### [Click here for the live app!](https://my-health-bubble.herokuapp.com/)
 # Technologies Used

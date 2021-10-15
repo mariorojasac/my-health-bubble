@@ -16,14 +16,20 @@
 
 # Screenshot(s)
 ![Homepage](images/IMG_0329.PNG)
-![Homepage](images/IMG_0327.PNG)
-![Homepage](images/IMG_0328.PNG)
+![Dashboard](images/IMG_0327.PNG)
+![Tracker](images/IMG_0328.PNG)
 
 # Getting Started 
-
-
-
-
+You need to connect to your own database.
+Make sure Dependacies are installed.
+Sign up as a user and then log in.
+Dashboard will be the central hub that you will be able to access everything from. Enjoy the app!
 
 # Future Enhancements
-
+- Chat Room with Socket.io 
+- Rona Tracker 
+- Appointment Setter with Doctors
+- UI Updates
+- Personalized Stats
+- Profile Customization
+- Symptom Checker

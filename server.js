@@ -35,7 +35,6 @@ app.use(expressSession({
     saveUninitialized: false
 }))
 
-// Mount Routes
 app.use('/', indexController);
 app.use('/trackedlogs', logsController);
 app.use('/', usersController);

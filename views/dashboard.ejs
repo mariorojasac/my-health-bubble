@@ -14,11 +14,12 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <style>
-     body {
+    body {
       font-family: 'Anton', sans-serif;
     }
+
     .img-fluid {
       max-width: 100%;
       height: auto;
@@ -35,7 +36,6 @@
     }
 
     .jumbotron {
-
       margin: 0;
       padding-bottom: 30px;
       background-image: linear-gradient(to right, #5637dd, blue);
@@ -53,7 +53,6 @@
     }
 
     a {
-
       text-decoration: none;
       color: black;
     }
@@ -62,37 +61,30 @@
 </head>
 
 <body>
-
   <header class="jumbotron jumbotron-fluid">
     <div class="container">
       <div class="row row-content">
         <div class="col">
- <div><img src="<%= user.profilePic %>" alt="" /></div>
-      <div><h1>Hello <%= user.username %></h1></div>
+          <div><img src="<%= user.profilePic %>" alt="" /></div>
+          <div>
+            <h1>Hello <%= user.username %></h1>
+          </div>
         </div>
         <div class="col">
           <h1>DASHBOARD</h1>
         </div>
         <div class="col">
-
         </div>
       </div>
-   
-    <div class="row">
-      <div class="col">  <button><a href="/logout">Logout</a></button> </div>
-      <div class="col">
-    
-      <button><a href="/trackedlogs">My Health Tracker</a></button>
- 
-    
-  </div>
-    <div class="col"> <button><a href="/profile">My Health Profile</a></button> </div>
-  </div>
-
-      
-  
-   </div>
-  </div>
+      <div class="row">
+        <div class="col"> <button><a href="/logout">Logout</a></button> </div>
+        <div class="col">
+          <button><a href="/trackedlogs">My Health Tracker</a></button>
+        </div>
+        <div class="col"> <button><a href="/profile">My Health Profile</a></button> </div>
+      </div>
+    </div>
+    </div>
   </header>
 
   <div class="container">
@@ -128,7 +120,6 @@
       </div>
       <div class="col"></div>
     </div>
-
     <div class="row">
       <div class="col"></div>
       <div class="col">
